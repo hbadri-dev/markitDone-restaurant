@@ -1,12 +1,13 @@
 .c-section--header {
   background: transparent;
-  padding: 1.5em 0;
+  padding: 0;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 10;
   width: 100%;
   transition: padding 200ms ease-in-out;
+  overflow: hidden;
 
   @include mq(md) {
     padding-top: 4em;
@@ -21,13 +22,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1.5em;
 
   @include mq(md) {
     flex-direction: column;
+    padding: 0;
   }
 
   @include mq(lg) {
     flex-direction: row;
+    padding: 0;
   }
 }
 
