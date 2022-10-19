@@ -1,0 +1,89 @@
+.c-section--hero {
+    padding: 0;
+    background: url('../../images/bg-hero.jpg') no-repeat center;
+    background-size: cover;
+    margin-bottom: 2em;
+}
+
+.c-hero {
+    padding: 11.375em 0 7.3125em;
+
+    @include mq(md) {
+        padding: 23.875em 0 8.25em
+    }
+
+    @include mq(lg) {
+        padding: 23.3125em 0 17.5em
+    }
+}
+
+.c-hero--title {
+    padding: 0;
+    margin: 0 0 0.4571em;
+    font-family: $robotoSlab;
+    @include font-size(35px, 1.2);
+    font-weight: 700;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+
+    @include mq(md) {
+        @include font-size(52px, 1.1923em);
+        margin: 0 auto 0.4615em auto;
+        max-width: 11.25em;
+    }
+}
+
+.c-hero--description {
+    padding: 0;
+    margin: 0 0 3.2727em;
+    font-family: $catamaran;
+    @include font-size(22px, 1.6363em);
+    font-weight: 400;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include mq(md) {
+        @include font-size(26px, 1.6538em);
+        margin: 0 0 3.0769em;
+    }
+
+    @include mq(md) {
+        @include font-size(24px, 1.7916em);
+        margin: 0 0 2.875em;
+    }
+}
+
+.c-hero--btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 13.75em;
+    align-items: stretch;
+    gap: 1em;
+    margin: auto;
+
+    @include mq(md) {
+        flex-direction: row;
+        max-width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 7.375em;
+        gap: 1.25;
+    }
+
+    @include mq(lg) {
+        margin-bottom: 0;
+        gap: 1.25;
+    }
+}
+
+.c-hero--arrow-down-icon {
+    display: none;
+
+    @include mq(md, lg) {
+        display: block;
+        text-align: center;
+    }
+}
