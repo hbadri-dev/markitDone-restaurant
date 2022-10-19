@@ -1,0 +1,36 @@
+.c-title {
+    font-family: $robotoSlab;
+    font-weight: 400;
+    @include font-size(34px,1.3235);
+
+    text-transform: capitalize;
+    text-align: center;
+
+    margin: 0 0 2em;
+    padding: 0;
+
+    position: relative;
+
+    @include mq(md){
+        @include font-size(40px,1.325);
+        margin-bottom: 1.7em;
+    }
+
+    @include mq(lg){
+        text-align: left;
+    }
+}
+
+.c-title::after{
+    content: '';
+    width: 2.75rem;
+    border-bottom: 0.25rem solid var(--orange);
+
+    position: absolute;
+    bottom: -0.5rem;
+    left: calc(50% - 1.375rem);
+
+    @include mq(lg){
+        left:0;
+    }
+}
