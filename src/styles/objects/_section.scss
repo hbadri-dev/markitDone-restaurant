@@ -1,5 +1,5 @@
 .o-section {
-  padding: 3.125em 0;
+  padding: 2em 0;
   @include mq(desktop) {
     padding: 4.375em 0;
   }
@@ -7,7 +7,12 @@
 .o-section__wrapper {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 1.5625em;
+  padding: 0;
+
+  @include mq(md){
+    padding: 0 2.125em;
+  }
+
   @include mq(lg) {
     max-width: calc(1190px - 2em);
   }

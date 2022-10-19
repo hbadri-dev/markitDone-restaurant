@@ -3,14 +3,35 @@
   'use strict';
   document.addEventListener('DOMContentLoaded', function () {
 
-    var t = document.querySelectorAll(".js-hamburger");
-    if (t) {
-      var o = function () {
+    let hamburger = document.querySelectorAll(".js-hamburger");
+    if (hamburger) {
+      let openNav = () => {
         document.getElementsByTagName("html")[0].classList.toggle("is-fixed"), document.querySelector(".js-nav").classList.toggle("is-open")
       };
-      t.forEach((function (e) {
-        e.addEventListener("click", o, !1)
+      hamburger.forEach(((e) => {
+        e.addEventListener("click", openNav, !1)
       }))
     }
   });
+
+  let tab = document.querySelectorAll(".js-tab .c-tab__nav li");
+  if (tab) {
+    let tabPane = document.querySelectorAll(".js-tab .c-tab__pane");
+
+    let openTab = (id) => {
+      tab.forEach((e, index) => {
+        if(id == index){
+          e.classList.add("is-active");
+          tabPane[index].classList.add("is-active");
+        }else{
+          e.classList.remove("is-active");
+          tabPane[index].classList.remove("is-active");
+        }
+      })
+    }
+
+    tab.forEach(((e, index) => {
+      e.addEventListener("click", () => { openTab(index) })
+    }))
+  }
 })();

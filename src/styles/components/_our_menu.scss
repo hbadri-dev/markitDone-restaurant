@@ -1,0 +1,14 @@
+.c-section--our-menu {
+    padding-top: 0;
+
+    @include mq(md){
+        padding-top: 4.5em;
+    }
+}
+
+.c-our-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}

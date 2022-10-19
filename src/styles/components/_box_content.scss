@@ -1,0 +1,54 @@
+.c-box-content {
+    padding: 4em 1.5625em;
+    color: var(--white);
+    background: var(--brown);
+    border-color: var(--brown-light);
+    border-style: solid;
+    border-width: 1px 0;
+
+    @include mq(md) {
+        border-width: 1px;
+        padding: 5.1875em 2.5em;
+    }
+
+    @include mq(lg) {
+        padding: 6.5em;
+    }
+}
+
+.c-box-content__title {
+    font-family: $robotoSlab;
+    font-weight: 400;
+    @include font-size(34px,1.3235);
+
+    text-transform: capitalize;
+    text-align: center;
+
+    margin: 0 0 2em;
+    padding: 0;
+
+    position: relative;
+
+    @include mq(md){
+        @include font-size(40px,1.325);
+        margin-bottom: 1.7em;
+    }
+
+    @include mq(lg){
+        text-align: left;
+    }
+}
+
+.c-box-content__title::after{
+    content: '';
+    width: 2.75rem;
+    border-bottom: 0.25rem solid var(--orange);
+
+    position: absolute;
+    bottom: -0.5rem;
+    left: calc(50% - 1.375rem);
+
+    @include mq(lg){
+        left:0;
+    }
+}
