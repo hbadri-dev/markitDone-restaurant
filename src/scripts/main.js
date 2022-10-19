@@ -20,10 +20,10 @@
 
     let openTab = (id) => {
       tab.forEach((e, index) => {
-        if(id == index){
+        if (id == index) {
           e.classList.add("is-active");
           tabPane[index].classList.add("is-active");
-        }else{
+        } else {
           e.classList.remove("is-active");
           tabPane[index].classList.remove("is-active");
         }
@@ -34,4 +34,44 @@
       e.addEventListener("click", () => { openTab(index) })
     }))
   }
+
+  let popularDishes = document.querySelector('.js-popular-dishes');
+  if (popularDishes) {
+    let flkty = new Flickity(popularDishes, {
+      // options
+      cellAlign: 'left',
+      contain: true,
+      pageDots: false,
+      prevNextButtons: false,
+      cellSelector: ".c-popular-dishes__slide",
+    });
+
+    let prevButton = document.querySelector(".js-popular-dishes-previous");
+    let nextButton = document.querySelector(".js-popular-dishes-next");
+
+    prevButton.addEventListener("click", () => flkty.previous(true));
+    nextButton.addEventListener("click", () => flkty.next(true));
+
+    let pageNumber = document.querySelectorAll(".c-popular-dishes__page-number span");
+    pageNumber[1].textContent = flkty.getCellElements().length;
+    function listener() {
+      pageNumber[0].textContent = flkty.selectedIndex + 1;
+    }
+
+    flkty.on('change', listener);
+  }
+
+  // var adplacement = document.querySelector('.js-adplacement');
+  // if (adplacement) {
+  //   new window.Flickity(adplacement, {
+  //     contain: false,
+  //     groupCells: 1,
+  //     adaptiveHeight: true,
+  //     pageDots: true,
+  //     watchCSS: true,
+  //     prevNextButtons: false,
+  //     cellAlign: 'center',
+  //     cellSelector: ".c-adplacement__item",
+  //   });
+  // }
 })();
