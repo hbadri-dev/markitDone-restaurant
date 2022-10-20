@@ -61,17 +61,24 @@
     flkty.on('change', listener);
   }
 
-  // var adplacement = document.querySelector('.js-adplacement');
-  // if (adplacement) {
-  //   new window.Flickity(adplacement, {
-  //     contain: false,
-  //     groupCells: 1,
-  //     adaptiveHeight: true,
-  //     pageDots: true,
-  //     watchCSS: true,
-  //     prevNextButtons: false,
-  //     cellAlign: 'center',
-  //     cellSelector: ".c-adplacement__item",
-  //   });
-  // }
+  let plusNumber = document.querySelector(".js-number-plus");
+  if (plusNumber) {
+    let numberField = document.getElementById('nember-of-people');
+
+    let plus = () => {
+      numberField.value = Number(numberField.value) + 1;
+    }
+    plusNumber.addEventListener("click", plus);
+  }
+
+  let minusNumber = document.querySelector(".js-number-minus");
+  if (minusNumber) {
+    let numberField = document.getElementById('nember-of-people');
+
+    let minus = () => {
+      if (Number(numberField.value) > 0)
+        numberField.value = Number(numberField.value) - 1;
+    }
+    minusNumber.addEventListener("click", minus);
+  }
 })();
