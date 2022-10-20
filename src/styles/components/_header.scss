@@ -200,9 +200,13 @@
   color: #FFFFFF;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-decoration: none;
+
+  &:hover {
+    color: var(--brown-light-secondary);
+  }
 }
 
-.c-header__nav ul li a.active {
+.c-header__nav ul li a.is-active {
   color: #FF4800;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 

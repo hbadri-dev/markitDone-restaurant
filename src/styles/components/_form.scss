@@ -1,4 +1,8 @@
-.c-form {}
+.c-form {display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
 
 .c-form__row {
     display: flex;
@@ -17,17 +21,27 @@
     color: var(--gray-2);
 }
 
-.c-form__field{
+.c-form__field {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     height: 3.0625em;
     margin-bottom: 1.9375em;
-    width: 100%;
+    // width: 100%;
     color: var(--white-secondary);
-    // padding: 0 1em;
+    min-width: 94%;
+    padding: 0 0.75em;
+
+    @include mq(md) {
+        padding: 0 0.1.125em;
+    }
+
+    @include mq(lg) {
+        padding: 0 1.25em;
+        min-width: auto;
+    }
 }
 
-input[type="number"].c-form__field{
+input[type="number"].c-form__field {
     text-align: center;
 }
 
@@ -35,23 +49,23 @@ input[type="number"].c-form__field{
     font-size: 1.5em;
     color: var(--gray-2);
     filter: invert(1);
-    opacity:0;
+    opacity: 0;
 }
 
-.c-form__icon{
+.c-form__icon {
     position: absolute;
     top: 2.9375em;
     right: 1.125em;
 }
 
-.c-form__number-plus{
+.c-form__number-plus {
     position: absolute;
     cursor: pointer;
     right: 1.25em;
     top: 3.125em;
 }
 
-.c-form__number-minus{
+.c-form__number-minus {
     position: absolute;
     cursor: pointer;
     left: 1.25em;
@@ -61,10 +75,10 @@ input[type="number"].c-form__field{
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
