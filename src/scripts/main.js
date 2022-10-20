@@ -43,7 +43,6 @@
       contain: true,
       pageDots: false,
       prevNextButtons: false,
-      cellSelector: ".c-popular-dishes__slide",
     });
 
     let prevButton = document.querySelector(".js-popular-dishes-previous");
