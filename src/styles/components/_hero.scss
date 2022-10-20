@@ -16,7 +16,7 @@
     }
 }
 
-.c-hero--title {
+.c-hero__title {
     padding: 0;
     margin: 0 0 0.4571em;
     font-family: $robotoSlab;
@@ -27,34 +27,34 @@
     text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
 
     @include mq(md) {
-        @include font-size(52px, 1.1923em);
+        @include font-size(52px, 1.1923);
         margin: 0 auto 0.4615em auto;
         max-width: 11.25em;
     }
 }
 
-.c-hero--description {
+.c-hero__description {
     padding: 0;
     margin: 0 0 3.2727em;
     font-family: $catamaran;
-    @include font-size(22px, 1.6363em);
+    @include font-size(22px, 1.6363);
     font-weight: 400;
     text-align: center;
     color: #FFFFFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     @include mq(md) {
-        @include font-size(26px, 1.6538em);
+        @include font-size(26px, 1.6538);
         margin: 0 0 3.0769em;
     }
 
     @include mq(md) {
-        @include font-size(24px, 1.7916em);
+        @include font-size(24px, 1.7916);
         margin: 0 0 2.875em;
     }
 }
 
-.c-hero--btn-container {
+.c-hero__btn-container {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -78,7 +78,7 @@
     }
 }
 
-.c-hero--arrow-down-icon {
+.c-hero__arrow-down-icon {
     display: none;
 
     @include mq(md, lg) {
